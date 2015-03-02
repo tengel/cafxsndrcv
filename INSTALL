@@ -1,0 +1,10 @@
+
+Start the compilation with 'make' in the source directory.
+
+'make install' copies the executeables to /usr/local/bin.
+
+'make uninstall' removes the files from /usr/local/bin.
+'make clean' cleans the source directory.
+
+In the case of problems, write to timo-e@freenet.de
+

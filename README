@@ -1,0 +1,60 @@
+
+
+* cafxsnd/cafxrcv
+
+
+Tools for sending and receiving files to an 'Casio Algebra FX 2.0'
+calculator.
+Other types of Casio calculators are not tested, yet.
+
+Bugs, problems, comments? Write to timo-e@freenet.de
+
+
+
+
+* cafxsnd 
+
+
+Send file to a Casio Algebra FX. Sending more than one file is not
+supported yet. The local filename also becomes the filename on the calculator.
+Extensions to filenames separated with a dot ('.') are truncated.
+
+usage: cafxsnd -hVvd<device> -s<file> 
+   -s file              send file to calculator
+   -h                   print help and exit
+   -V                   print version information and exit
+   -v                   verbose mode
+   -d device            device where the Calculator ist connected to
+			(default is /dev/ttyS0)
+Example: 
+sending NEWTON.cafx to /dev/ttyS0 (on the calc, you'll find the file NEWTON):
+	cafxsnd -s NEWTON.cafx
+sending NEWTON.cafx to /dev/ttyS1
+	cafxsnd -s NEWTON.cafx -d /dev/ttyS1
+
+
+
+
+* cafxrcv
+
+
+Receive data from a 'Casio Algebra FX 2.0' calculator.
+
+usage: cafxrcv -hVvd<device>
+   -h                   print help and exit
+   -V                   print version information and exit
+   -v                   verbose mode
+   -d device            device where the Calculator ist connected to
+			(defualt is /dev/ttyS0)	     
+Example:
+receiving from /dev/ttyS0:
+	cafxrcv
+receiving from /dev/ttyS1:
+	cafxcom -d /dev/ttyS1
+receiving from /dev/ttyS1 in verbose mode:
+	cafxcom -vd /dev/ttyS1
+
+
+-- 
+Copyright (c) Timo Engel timo-e@freenet.de
+
